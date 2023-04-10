@@ -1,13 +1,2584 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/***********************
+  Media Queries
+***********************/
 body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff !important;
+  overflow-x: hidden !important;
+}
+body .add-btn {
+  margin-top: 10px;
+  color: #007EFF;
+}
+body .add-btn:hover {
+  color: #000;
+  opacity: 1;
+}
+body ul {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  list-style-type: none;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body img {
+  max-width: 100%;
 }
+body .loading-container {
+  justify-content: center;
+  display: flex;
+  height: 85vh;
+  align-content: center;
+  align-items: center;
+  color: #333 !important;
+}
+body .loading-container .ant-spin-dot i {
+  background-color: #333 !important;
+}
+body .loading-container .ant-spin-text {
+  color: #333;
+}
+body .loading-container.loading-container-h {
+  height: 250px;
+}
+body .small-loading-container {
+  justify-content: center;
+  display: flex;
+  margin: 40px;
+  align-content: center;
+  align-items: center;
+  color: #333 !important;
+}
+body .small-loading-container .ant-spin-dot i {
+  background-color: #333 !important;
+}
+body .small-loading-container .ant-spin-text {
+  color: #333;
+}
+body table {
+  background: #fff;
+}
+body .ant-modal {
+  width: 848px !important;
+}
+body .ant-modal-content {
+  width: 100%;
+}
+body .ant-modal-content .ant-modal-close .anticon {
+  color: #002244;
+}
+body .ant-modal-content .ant-modal-close .anticon:hover {
+  color: #007EFF;
+  opacity: 1;
+}
+body .ant-modal-body #FormView,
+body .ant-modal-body #CustomerFormView {
+  margin-top: 0;
+}
+body h1 {
+  font-weight: bold;
+  font-size: 18px;
+}
+body .fab-container {
+  bottom: 5vh;
+  position: fixed;
+  margin: 1em;
+  right: 2vw;
+}
+body .fab-container:hover {
+  opacity: 0.8;
+}
+body .fab-container button {
+  cursor: pointer !important;
+  color: white !important;
+  font-size: 24px !important;
+  background-color: #001529 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+}
+* {
+  box-sizing: border-box;
+}
+.side-drawer {
+  background: #fff !important;
+}
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #060818 !important;
+}
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.layout,
+.ant-popover,
+.ant-modal,
+.ant-drawer,
+.ant-tooltip {
+  /** Theme Padding **/
+  /** /.Theme Padding **/
+  /** Theme Margin **/
+  /** /.Theme Margin **/
+  /** Theme Border **/
+  /** /.Theme Border **/
+  /** Theme Text Color **/
+  /** Theme Text Color **/
+  /** Theme Background Color **/
+  /** /.Theme Background Color **/
+  /** Tag **/
+  /* Display None Helper Classes */
+  /* Display None Helper Classes */
+}
+.layout .ant-menu,
+.ant-popover .ant-menu,
+.ant-modal .ant-menu,
+.ant-drawer .ant-menu,
+.ant-tooltip .ant-menu {
+  text-align: left !important;
+}
+.layout .ant-menu .ant-menu-item,
+.ant-popover .ant-menu .ant-menu-item,
+.ant-modal .ant-menu .ant-menu-item,
+.ant-drawer .ant-menu .ant-menu-item,
+.ant-tooltip .ant-menu .ant-menu-item {
+  border-bottom: 0;
+}
+.layout .scroll-up-down,
+.ant-popover .scroll-up-down,
+.ant-modal .scroll-up-down,
+.ant-drawer .scroll-up-down,
+.ant-tooltip .scroll-up-down {
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.layout .rotate-360,
+.ant-popover .rotate-360,
+.ant-modal .rotate-360,
+.ant-drawer .rotate-360,
+.ant-tooltip .rotate-360 {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: hourglass;
+}
+@keyframes hourglass {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.layout .heartbeat,
+.ant-popover .heartbeat,
+.ant-modal .heartbeat,
+.ant-drawer .heartbeat,
+.ant-tooltip .heartbeat {
+  animation: heartbeat 1s infinite alternate;
+}
+@keyframes heartbeat {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes heartbeat {
+  to {
+    -webkit-transform: scale(1.1);
+  }
+}
+.layout .rotate,
+.ant-popover .rotate,
+.ant-modal .rotate,
+.ant-drawer .rotate,
+.ant-tooltip .rotate {
+  -webkit-animation-name: rotateme;
+  animation-name: rotateme;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@keyframes rotateme {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateme {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.layout .pd-5,
+.ant-popover .pd-5,
+.ant-modal .pd-5,
+.ant-drawer .pd-5,
+.ant-tooltip .pd-5 {
+  padding: 5px;
+}
+.layout .pd-t-5,
+.ant-popover .pd-t-5,
+.ant-modal .pd-t-5,
+.ant-drawer .pd-t-5,
+.ant-tooltip .pd-t-5 {
+  padding-top: 5px;
+}
+.layout .pd-b-5,
+.ant-popover .pd-b-5,
+.ant-modal .pd-b-5,
+.ant-drawer .pd-b-5,
+.ant-tooltip .pd-b-5 {
+  padding-bottom: 5px;
+}
+.layout .pd-l-5,
+.ant-popover .pd-l-5,
+.ant-modal .pd-l-5,
+.ant-drawer .pd-l-5,
+.ant-tooltip .pd-l-5 {
+  padding-left: 5px;
+}
+.layout .pd-r-5,
+.ant-popover .pd-r-5,
+.ant-modal .pd-r-5,
+.ant-drawer .pd-r-5,
+.ant-tooltip .pd-r-5 {
+  padding-right: 5px;
+}
+.layout .pd-t-b-5,
+.ant-popover .pd-t-b-5,
+.ant-modal .pd-t-b-5,
+.ant-drawer .pd-t-b-5,
+.ant-tooltip .pd-t-b-5 {
+  padding: 5px 0;
+}
+.layout .pd-l-r-5,
+.ant-popover .pd-l-r-5,
+.ant-modal .pd-l-r-5,
+.ant-drawer .pd-l-r-5,
+.ant-tooltip .pd-l-r-5 {
+  padding: 0 5px;
+}
+.layout .pd-10,
+.ant-popover .pd-10,
+.ant-modal .pd-10,
+.ant-drawer .pd-10,
+.ant-tooltip .pd-10 {
+  padding: 10px;
+}
+.layout .pd-t-10,
+.ant-popover .pd-t-10,
+.ant-modal .pd-t-10,
+.ant-drawer .pd-t-10,
+.ant-tooltip .pd-t-10 {
+  padding-top: 10px;
+}
+.layout .pd-b-10,
+.ant-popover .pd-b-10,
+.ant-modal .pd-b-10,
+.ant-drawer .pd-b-10,
+.ant-tooltip .pd-b-10 {
+  padding-bottom: 10px;
+}
+.layout .pd-l-10,
+.ant-popover .pd-l-10,
+.ant-modal .pd-l-10,
+.ant-drawer .pd-l-10,
+.ant-tooltip .pd-l-10 {
+  padding-left: 10px;
+}
+.layout .pd-r-10,
+.ant-popover .pd-r-10,
+.ant-modal .pd-r-10,
+.ant-drawer .pd-r-10,
+.ant-tooltip .pd-r-10 {
+  padding-right: 10px;
+}
+.layout .pd-t-b-10,
+.ant-popover .pd-t-b-10,
+.ant-modal .pd-t-b-10,
+.ant-drawer .pd-t-b-10,
+.ant-tooltip .pd-t-b-10 {
+  padding: 10px 0;
+}
+.layout .pd-l-r-10,
+.ant-popover .pd-l-r-10,
+.ant-modal .pd-l-r-10,
+.ant-drawer .pd-l-r-10,
+.ant-tooltip .pd-l-r-10 {
+  padding: 0 10px;
+}
+.layout .pd-15,
+.ant-popover .pd-15,
+.ant-modal .pd-15,
+.ant-drawer .pd-15,
+.ant-tooltip .pd-15 {
+  padding: 15px;
+}
+.layout .pd-t-15,
+.ant-popover .pd-t-15,
+.ant-modal .pd-t-15,
+.ant-drawer .pd-t-15,
+.ant-tooltip .pd-t-15 {
+  padding-top: 15px;
+}
+.layout .pd-b-15,
+.ant-popover .pd-b-15,
+.ant-modal .pd-b-15,
+.ant-drawer .pd-b-15,
+.ant-tooltip .pd-b-15 {
+  padding-bottom: 15px;
+}
+.layout .pd-l-15,
+.ant-popover .pd-l-15,
+.ant-modal .pd-l-15,
+.ant-drawer .pd-l-15,
+.ant-tooltip .pd-l-15 {
+  padding-left: 15px;
+}
+.layout .pd-r-15,
+.ant-popover .pd-r-15,
+.ant-modal .pd-r-15,
+.ant-drawer .pd-r-15,
+.ant-tooltip .pd-r-15 {
+  padding-right: 15px;
+}
+.layout .pd-t-b-15,
+.ant-popover .pd-t-b-15,
+.ant-modal .pd-t-b-15,
+.ant-drawer .pd-t-b-15,
+.ant-tooltip .pd-t-b-15 {
+  padding: 15px 0;
+}
+.layout .pd-l-r-15,
+.ant-popover .pd-l-r-15,
+.ant-modal .pd-l-r-15,
+.ant-drawer .pd-l-r-15,
+.ant-tooltip .pd-l-r-15 {
+  padding: 0 15px;
+}
+.layout .pd-20,
+.ant-popover .pd-20,
+.ant-modal .pd-20,
+.ant-drawer .pd-20,
+.ant-tooltip .pd-20 {
+  padding: 20px;
+}
+.layout .pd-t-20,
+.ant-popover .pd-t-20,
+.ant-modal .pd-t-20,
+.ant-drawer .pd-t-20,
+.ant-tooltip .pd-t-20 {
+  padding-top: 20px;
+}
+.layout .pd-b-20,
+.ant-popover .pd-b-20,
+.ant-modal .pd-b-20,
+.ant-drawer .pd-b-20,
+.ant-tooltip .pd-b-20 {
+  padding-bottom: 20px;
+}
+.layout .pd-l-20,
+.ant-popover .pd-l-20,
+.ant-modal .pd-l-20,
+.ant-drawer .pd-l-20,
+.ant-tooltip .pd-l-20 {
+  padding-left: 20px;
+}
+.layout .pd-r-20,
+.ant-popover .pd-r-20,
+.ant-modal .pd-r-20,
+.ant-drawer .pd-r-20,
+.ant-tooltip .pd-r-20 {
+  padding-right: 20px;
+}
+.layout .pd-t-b-20,
+.ant-popover .pd-t-b-20,
+.ant-modal .pd-t-b-20,
+.ant-drawer .pd-t-b-20,
+.ant-tooltip .pd-t-b-20 {
+  padding: 20px 0;
+}
+.layout .pd-l-r-20,
+.ant-popover .pd-l-r-20,
+.ant-modal .pd-l-r-20,
+.ant-drawer .pd-l-r-20,
+.ant-tooltip .pd-l-r-20 {
+  padding: 0 20px;
+}
+.layout .pd-25,
+.ant-popover .pd-25,
+.ant-modal .pd-25,
+.ant-drawer .pd-25,
+.ant-tooltip .pd-25 {
+  padding: 25px;
+}
+.layout .pd-t-25,
+.ant-popover .pd-t-25,
+.ant-modal .pd-t-25,
+.ant-drawer .pd-t-25,
+.ant-tooltip .pd-t-25 {
+  padding-top: 25px;
+}
+.layout .pd-b-25,
+.ant-popover .pd-b-25,
+.ant-modal .pd-b-25,
+.ant-drawer .pd-b-25,
+.ant-tooltip .pd-b-25 {
+  padding-bottom: 25px;
+}
+.layout .pd-l-25,
+.ant-popover .pd-l-25,
+.ant-modal .pd-l-25,
+.ant-drawer .pd-l-25,
+.ant-tooltip .pd-l-25 {
+  padding-left: 25px;
+}
+.layout .pd-r-25,
+.ant-popover .pd-r-25,
+.ant-modal .pd-r-25,
+.ant-drawer .pd-r-25,
+.ant-tooltip .pd-r-25 {
+  padding-right: 25px;
+}
+.layout .pd-t-b-25,
+.ant-popover .pd-t-b-25,
+.ant-modal .pd-t-b-25,
+.ant-drawer .pd-t-b-25,
+.ant-tooltip .pd-t-b-25 {
+  padding: 25px 0;
+}
+.layout .pd-l-r-25,
+.ant-popover .pd-l-r-25,
+.ant-modal .pd-l-r-25,
+.ant-drawer .pd-l-r-25,
+.ant-tooltip .pd-l-r-25 {
+  padding: 0 25px;
+}
+.layout .pd-30,
+.ant-popover .pd-30,
+.ant-modal .pd-30,
+.ant-drawer .pd-30,
+.ant-tooltip .pd-30 {
+  padding: 30px;
+}
+.layout .pd-t-30,
+.ant-popover .pd-t-30,
+.ant-modal .pd-t-30,
+.ant-drawer .pd-t-30,
+.ant-tooltip .pd-t-30 {
+  padding-top: 30px;
+}
+.layout .pd-b-30,
+.ant-popover .pd-b-30,
+.ant-modal .pd-b-30,
+.ant-drawer .pd-b-30,
+.ant-tooltip .pd-b-30 {
+  padding-bottom: 30px;
+}
+.layout .pd-l-30,
+.ant-popover .pd-l-30,
+.ant-modal .pd-l-30,
+.ant-drawer .pd-l-30,
+.ant-tooltip .pd-l-30 {
+  padding-left: 30px;
+}
+.layout .pd-r-30,
+.ant-popover .pd-r-30,
+.ant-modal .pd-r-30,
+.ant-drawer .pd-r-30,
+.ant-tooltip .pd-r-30 {
+  padding-right: 30px;
+}
+.layout .pd-t-b-30,
+.ant-popover .pd-t-b-30,
+.ant-modal .pd-t-b-30,
+.ant-drawer .pd-t-b-30,
+.ant-tooltip .pd-t-b-30 {
+  padding: 30px 0;
+}
+.layout .pd-l-r-30,
+.ant-popover .pd-l-r-30,
+.ant-modal .pd-l-r-30,
+.ant-drawer .pd-l-r-30,
+.ant-tooltip .pd-l-r-30 {
+  padding: 0 30px;
+}
+.layout .pd-0,
+.ant-popover .pd-0,
+.ant-modal .pd-0,
+.ant-drawer .pd-0,
+.ant-tooltip .pd-0 {
+  padding: 0 !important;
+}
+.layout .pd-b-0,
+.ant-popover .pd-b-0,
+.ant-modal .pd-b-0,
+.ant-drawer .pd-b-0,
+.ant-tooltip .pd-b-0 {
+  padding-bottom: 0 !important;
+}
+.layout .pd-t-0,
+.ant-popover .pd-t-0,
+.ant-modal .pd-t-0,
+.ant-drawer .pd-t-0,
+.ant-tooltip .pd-t-0 {
+  padding-top: 0 !important;
+}
+.layout .pd-l-0,
+.ant-popover .pd-l-0,
+.ant-modal .pd-l-0,
+.ant-drawer .pd-l-0,
+.ant-tooltip .pd-l-0 {
+  padding-left: 0 !important;
+}
+.layout .pd-r-0,
+.ant-popover .pd-r-0,
+.ant-modal .pd-r-0,
+.ant-drawer .pd-r-0,
+.ant-tooltip .pd-r-0 {
+  padding-right: 0 !important;
+}
+.layout .pd-t-65,
+.ant-popover .pd-t-65,
+.ant-modal .pd-t-65,
+.ant-drawer .pd-t-65,
+.ant-tooltip .pd-t-65 {
+  padding-top: 65px;
+}
+.layout .pd-t-42,
+.ant-popover .pd-t-42,
+.ant-modal .pd-t-42,
+.ant-drawer .pd-t-42,
+.ant-tooltip .pd-t-42 {
+  padding-top: 42px;
+}
+.layout .mr-5,
+.ant-popover .mr-5,
+.ant-modal .mr-5,
+.ant-drawer .mr-5,
+.ant-tooltip .mr-5 {
+  margin: 5px;
+}
+.layout .mr-t-5,
+.ant-popover .mr-t-5,
+.ant-modal .mr-t-5,
+.ant-drawer .mr-t-5,
+.ant-tooltip .mr-t-5 {
+  margin-top: 5px;
+}
+.layout .mr-b-5,
+.ant-popover .mr-b-5,
+.ant-modal .mr-b-5,
+.ant-drawer .mr-b-5,
+.ant-tooltip .mr-b-5 {
+  margin-bottom: 5px;
+}
+.layout .mr-l-5,
+.ant-popover .mr-l-5,
+.ant-modal .mr-l-5,
+.ant-drawer .mr-l-5,
+.ant-tooltip .mr-l-5 {
+  margin-left: 5px;
+}
+.layout .mr-r-5,
+.ant-popover .mr-r-5,
+.ant-modal .mr-r-5,
+.ant-drawer .mr-r-5,
+.ant-tooltip .mr-r-5 {
+  margin-right: 5px;
+}
+.layout .mr-t-b-5,
+.ant-popover .mr-t-b-5,
+.ant-modal .mr-t-b-5,
+.ant-drawer .mr-t-b-5,
+.ant-tooltip .mr-t-b-5 {
+  margin: 5px 0;
+}
+.layout .mr-l-r-5,
+.ant-popover .mr-l-r-5,
+.ant-modal .mr-l-r-5,
+.ant-drawer .mr-l-r-5,
+.ant-tooltip .mr-l-r-5 {
+  margin: 0 5px;
+}
+.layout .mr-10,
+.ant-popover .mr-10,
+.ant-modal .mr-10,
+.ant-drawer .mr-10,
+.ant-tooltip .mr-10 {
+  margin: 10px;
+}
+.layout .mr-t-10,
+.ant-popover .mr-t-10,
+.ant-modal .mr-t-10,
+.ant-drawer .mr-t-10,
+.ant-tooltip .mr-t-10 {
+  margin-top: 10px;
+}
+.layout .mr-b-10,
+.ant-popover .mr-b-10,
+.ant-modal .mr-b-10,
+.ant-drawer .mr-b-10,
+.ant-tooltip .mr-b-10 {
+  margin-bottom: 10px;
+}
+.layout .mr-l-10,
+.ant-popover .mr-l-10,
+.ant-modal .mr-l-10,
+.ant-drawer .mr-l-10,
+.ant-tooltip .mr-l-10 {
+  margin-left: 10px;
+}
+.layout .mr-r-10,
+.ant-popover .mr-r-10,
+.ant-modal .mr-r-10,
+.ant-drawer .mr-r-10,
+.ant-tooltip .mr-r-10 {
+  margin-right: 10px;
+}
+.layout .mr-t-b-10,
+.ant-popover .mr-t-b-10,
+.ant-modal .mr-t-b-10,
+.ant-drawer .mr-t-b-10,
+.ant-tooltip .mr-t-b-10 {
+  margin: 10px 0;
+}
+.layout .mr-l-r-10,
+.ant-popover .mr-l-r-10,
+.ant-modal .mr-l-r-10,
+.ant-drawer .mr-l-r-10,
+.ant-tooltip .mr-l-r-10 {
+  margin: 0 10px;
+}
+.layout .mr-15,
+.ant-popover .mr-15,
+.ant-modal .mr-15,
+.ant-drawer .mr-15,
+.ant-tooltip .mr-15 {
+  margin: 15px;
+}
+.layout .mr-t-15,
+.ant-popover .mr-t-15,
+.ant-modal .mr-t-15,
+.ant-drawer .mr-t-15,
+.ant-tooltip .mr-t-15 {
+  margin-top: 15px;
+}
+.layout .mr-b-15,
+.ant-popover .mr-b-15,
+.ant-modal .mr-b-15,
+.ant-drawer .mr-b-15,
+.ant-tooltip .mr-b-15 {
+  margin-bottom: 15px;
+}
+.layout .mr-l-15,
+.ant-popover .mr-l-15,
+.ant-modal .mr-l-15,
+.ant-drawer .mr-l-15,
+.ant-tooltip .mr-l-15 {
+  margin-left: 15px;
+}
+.layout .mr-r-15,
+.ant-popover .mr-r-15,
+.ant-modal .mr-r-15,
+.ant-drawer .mr-r-15,
+.ant-tooltip .mr-r-15 {
+  margin-right: 15px;
+}
+.layout .mr-t-b-15,
+.ant-popover .mr-t-b-15,
+.ant-modal .mr-t-b-15,
+.ant-drawer .mr-t-b-15,
+.ant-tooltip .mr-t-b-15 {
+  margin: 15px 0;
+}
+.layout .mr-l-r-15,
+.ant-popover .mr-l-r-15,
+.ant-modal .mr-l-r-15,
+.ant-drawer .mr-l-r-15,
+.ant-tooltip .mr-l-r-15 {
+  margin: 0 15px;
+}
+.layout .mr-20,
+.ant-popover .mr-20,
+.ant-modal .mr-20,
+.ant-drawer .mr-20,
+.ant-tooltip .mr-20 {
+  margin: 20px;
+}
+.layout .mr-t-20,
+.ant-popover .mr-t-20,
+.ant-modal .mr-t-20,
+.ant-drawer .mr-t-20,
+.ant-tooltip .mr-t-20 {
+  margin-top: 20px;
+}
+.layout .mr-b-20,
+.ant-popover .mr-b-20,
+.ant-modal .mr-b-20,
+.ant-drawer .mr-b-20,
+.ant-tooltip .mr-b-20 {
+  margin-bottom: 20px;
+}
+.layout .mr-l-20,
+.ant-popover .mr-l-20,
+.ant-modal .mr-l-20,
+.ant-drawer .mr-l-20,
+.ant-tooltip .mr-l-20 {
+  margin-left: 20px;
+}
+.layout .mr-r-20,
+.ant-popover .mr-r-20,
+.ant-modal .mr-r-20,
+.ant-drawer .mr-r-20,
+.ant-tooltip .mr-r-20 {
+  margin-right: 20px;
+}
+.layout .mr-t-b-20,
+.ant-popover .mr-t-b-20,
+.ant-modal .mr-t-b-20,
+.ant-drawer .mr-t-b-20,
+.ant-tooltip .mr-t-b-20 {
+  margin: 20px 0;
+}
+.layout .mr-l-r-20,
+.ant-popover .mr-l-r-20,
+.ant-modal .mr-l-r-20,
+.ant-drawer .mr-l-r-20,
+.ant-tooltip .mr-l-r-20 {
+  margin: 0 20px;
+}
+.layout .mr-25,
+.ant-popover .mr-25,
+.ant-modal .mr-25,
+.ant-drawer .mr-25,
+.ant-tooltip .mr-25 {
+  margin: 25px;
+}
+.layout .mr-t-25,
+.ant-popover .mr-t-25,
+.ant-modal .mr-t-25,
+.ant-drawer .mr-t-25,
+.ant-tooltip .mr-t-25 {
+  margin-top: 25px;
+}
+.layout .mr-b-25,
+.ant-popover .mr-b-25,
+.ant-modal .mr-b-25,
+.ant-drawer .mr-b-25,
+.ant-tooltip .mr-b-25 {
+  margin-bottom: 25px;
+}
+.layout .mr-l-25,
+.ant-popover .mr-l-25,
+.ant-modal .mr-l-25,
+.ant-drawer .mr-l-25,
+.ant-tooltip .mr-l-25 {
+  margin-left: 25px;
+}
+.layout .mr-r-25,
+.ant-popover .mr-r-25,
+.ant-modal .mr-r-25,
+.ant-drawer .mr-r-25,
+.ant-tooltip .mr-r-25 {
+  margin-right: 25px;
+}
+.layout .mr-t-b-25,
+.ant-popover .mr-t-b-25,
+.ant-modal .mr-t-b-25,
+.ant-drawer .mr-t-b-25,
+.ant-tooltip .mr-t-b-25 {
+  margin: 25px 0;
+}
+.layout .mr-l-r-25,
+.ant-popover .mr-l-r-25,
+.ant-modal .mr-l-r-25,
+.ant-drawer .mr-l-r-25,
+.ant-tooltip .mr-l-r-25 {
+  margin: 0 25px;
+}
+.layout .mr-30,
+.ant-popover .mr-30,
+.ant-modal .mr-30,
+.ant-drawer .mr-30,
+.ant-tooltip .mr-30 {
+  margin: 30px;
+}
+.layout .mr-t-30,
+.ant-popover .mr-t-30,
+.ant-modal .mr-t-30,
+.ant-drawer .mr-t-30,
+.ant-tooltip .mr-t-30 {
+  margin-top: 30px;
+}
+.layout .mr-b-30,
+.ant-popover .mr-b-30,
+.ant-modal .mr-b-30,
+.ant-drawer .mr-b-30,
+.ant-tooltip .mr-b-30 {
+  margin-bottom: 30px;
+}
+.layout .mr-l-30,
+.ant-popover .mr-l-30,
+.ant-modal .mr-l-30,
+.ant-drawer .mr-l-30,
+.ant-tooltip .mr-l-30 {
+  margin-left: 30px;
+}
+.layout .mr-r-30,
+.ant-popover .mr-r-30,
+.ant-modal .mr-r-30,
+.ant-drawer .mr-r-30,
+.ant-tooltip .mr-r-30 {
+  margin-right: 30px;
+}
+.layout .mr-t-b-30,
+.ant-popover .mr-t-b-30,
+.ant-modal .mr-t-b-30,
+.ant-drawer .mr-t-b-30,
+.ant-tooltip .mr-t-b-30 {
+  margin: 30px 0;
+}
+.layout .mr-l-r-30,
+.ant-popover .mr-l-r-30,
+.ant-modal .mr-l-r-30,
+.ant-drawer .mr-l-r-30,
+.ant-tooltip .mr-l-r-30 {
+  margin: 0 30px;
+}
+.layout .mr-0,
+.ant-popover .mr-0,
+.ant-modal .mr-0,
+.ant-drawer .mr-0,
+.ant-tooltip .mr-0 {
+  margin: 0 !important;
+}
+.layout .mr-b-0,
+.ant-popover .mr-b-0,
+.ant-modal .mr-b-0,
+.ant-drawer .mr-b-0,
+.ant-tooltip .mr-b-0 {
+  margin-bottom: 0 !important;
+}
+.layout .mr-t-0,
+.ant-popover .mr-t-0,
+.ant-modal .mr-t-0,
+.ant-drawer .mr-t-0,
+.ant-tooltip .mr-t-0 {
+  margin-top: 0 !important;
+}
+.layout .mr-l-0,
+.ant-popover .mr-l-0,
+.ant-modal .mr-l-0,
+.ant-drawer .mr-l-0,
+.ant-tooltip .mr-l-0 {
+  margin-left: 0 !important;
+}
+.layout .mr-r-0,
+.ant-popover .mr-r-0,
+.ant-modal .mr-r-0,
+.ant-drawer .mr-r-0,
+.ant-tooltip .mr-r-0 {
+  margin-right: 0 !important;
+}
+.layout .mr-t-65,
+.ant-popover .mr-t-65,
+.ant-modal .mr-t-65,
+.ant-drawer .mr-t-65,
+.ant-tooltip .mr-t-65 {
+  margin-top: 65px;
+}
+.layout .mr-t-42,
+.ant-popover .mr-t-42,
+.ant-modal .mr-t-42,
+.ant-drawer .mr-t-42,
+.ant-tooltip .mr-t-42 {
+  margin-top: 42px;
+}
+.layout .border-white,
+.ant-popover .border-white,
+.ant-modal .border-white,
+.ant-drawer .border-white,
+.ant-tooltip .border-white {
+  border: 1px solid #fff !important;
+}
+.layout .border-top-white,
+.ant-popover .border-top-white,
+.ant-modal .border-top-white,
+.ant-drawer .border-top-white,
+.ant-tooltip .border-top-white {
+  border-top: 1px solid #fff !important;
+}
+.layout .border-bottom-white,
+.ant-popover .border-bottom-white,
+.ant-modal .border-bottom-white,
+.ant-drawer .border-bottom-white,
+.ant-tooltip .border-bottom-white {
+  border-bottom: 1px solid #fff !important;
+}
+.layout .border-left-white,
+.ant-popover .border-left-white,
+.ant-modal .border-left-white,
+.ant-drawer .border-left-white,
+.ant-tooltip .border-left-white {
+  border-left: 1px solid #fff !important;
+}
+.layout .border-right-white,
+.ant-popover .border-right-white,
+.ant-modal .border-right-white,
+.ant-drawer .border-right-white,
+.ant-tooltip .border-right-white {
+  border-right: 1px solid #fff !important;
+}
+.layout .border-black,
+.ant-popover .border-black,
+.ant-modal .border-black,
+.ant-drawer .border-black,
+.ant-tooltip .border-black {
+  border: 1px solid #000 !important;
+}
+.layout .border-top-black,
+.ant-popover .border-top-black,
+.ant-modal .border-top-black,
+.ant-drawer .border-top-black,
+.ant-tooltip .border-top-black {
+  border-top: 1px solid #000 !important;
+}
+.layout .border-bottom-black,
+.ant-popover .border-bottom-black,
+.ant-modal .border-bottom-black,
+.ant-drawer .border-bottom-black,
+.ant-tooltip .border-bottom-black {
+  border-bottom: 1px solid #000 !important;
+}
+.layout .border-left-black,
+.ant-popover .border-left-black,
+.ant-modal .border-left-black,
+.ant-drawer .border-left-black,
+.ant-tooltip .border-left-black {
+  border-left: 1px solid #000 !important;
+}
+.layout .border-right-black,
+.ant-popover .border-right-black,
+.ant-modal .border-right-black,
+.ant-drawer .border-right-black,
+.ant-tooltip .border-right-black {
+  border-right: 1px solid #000 !important;
+}
+.layout .border-danger,
+.ant-popover .border-danger,
+.ant-modal .border-danger,
+.ant-drawer .border-danger,
+.ant-tooltip .border-danger {
+  border: 1px solid #EB5757 !important;
+}
+.layout .border-top-danger,
+.ant-popover .border-top-danger,
+.ant-modal .border-top-danger,
+.ant-drawer .border-top-danger,
+.ant-tooltip .border-top-danger {
+  border-top: 1px solid #EB5757 !important;
+}
+.layout .border-bottom-danger,
+.ant-popover .border-bottom-danger,
+.ant-modal .border-bottom-danger,
+.ant-drawer .border-bottom-danger,
+.ant-tooltip .border-bottom-danger {
+  border-bottom: 1px solid #EB5757 !important;
+}
+.layout .border-left-danger,
+.ant-popover .border-left-danger,
+.ant-modal .border-left-danger,
+.ant-drawer .border-left-danger,
+.ant-tooltip .border-left-danger {
+  border-left: 1px solid #EB5757 !important;
+}
+.layout .border-right-danger,
+.ant-popover .border-right-danger,
+.ant-modal .border-right-danger,
+.ant-drawer .border-right-danger,
+.ant-tooltip .border-right-danger {
+  border-right: 1px solid #EB5757 !important;
+}
+.layout .border-primary,
+.ant-popover .border-primary,
+.ant-modal .border-primary,
+.ant-drawer .border-primary,
+.ant-tooltip .border-primary {
+  border: 1px solid #007EFF !important;
+}
+.layout .border-top-primary,
+.ant-popover .border-top-primary,
+.ant-modal .border-top-primary,
+.ant-drawer .border-top-primary,
+.ant-tooltip .border-top-primary {
+  border-top: 1px solid #007EFF !important;
+}
+.layout .border-bottom-primary,
+.ant-popover .border-bottom-primary,
+.ant-modal .border-bottom-primary,
+.ant-drawer .border-bottom-primary,
+.ant-tooltip .border-bottom-primary {
+  border-bottom: 1px solid #007EFF !important;
+}
+.layout .border-left-primary,
+.ant-popover .border-left-primary,
+.ant-modal .border-left-primary,
+.ant-drawer .border-left-primary,
+.ant-tooltip .border-left-primary {
+  border-left: 1px solid #007EFF !important;
+}
+.layout .border-right-primary,
+.ant-popover .border-right-primary,
+.ant-modal .border-right-primary,
+.ant-drawer .border-right-primary,
+.ant-tooltip .border-right-primary {
+  border-right: 1px solid #007EFF !important;
+}
+.layout .border-secondary,
+.ant-popover .border-secondary,
+.ant-modal .border-secondary,
+.ant-drawer .border-secondary,
+.ant-tooltip .border-secondary {
+  border: 1px solid #00CFFF !important;
+}
+.layout .border-top-secondary,
+.ant-popover .border-top-secondary,
+.ant-modal .border-top-secondary,
+.ant-drawer .border-top-secondary,
+.ant-tooltip .border-top-secondary {
+  border-top: 1px solid #00CFFF !important;
+}
+.layout .border-bottom-secondary,
+.ant-popover .border-bottom-secondary,
+.ant-modal .border-bottom-secondary,
+.ant-drawer .border-bottom-secondary,
+.ant-tooltip .border-bottom-secondary {
+  border-bottom: 1px solid #00CFFF !important;
+}
+.layout .border-left-secondary,
+.ant-popover .border-left-secondary,
+.ant-modal .border-left-secondary,
+.ant-drawer .border-left-secondary,
+.ant-tooltip .border-left-secondary {
+  border-left: 1px solid #00CFFF !important;
+}
+.layout .border-right-secondary,
+.ant-popover .border-right-secondary,
+.ant-modal .border-right-secondary,
+.ant-drawer .border-right-secondary,
+.ant-tooltip .border-right-secondary {
+  border-right: 1px solid #00CFFF !important;
+}
+.layout .border-success,
+.ant-popover .border-success,
+.ant-modal .border-success,
+.ant-drawer .border-success,
+.ant-tooltip .border-success {
+  border: 1px solid #20E0AB !important;
+}
+.layout .border-top-success,
+.ant-popover .border-top-success,
+.ant-modal .border-top-success,
+.ant-drawer .border-top-success,
+.ant-tooltip .border-top-success {
+  border-top: 1px solid #20E0AB !important;
+}
+.layout .border-bottom-success,
+.ant-popover .border-bottom-success,
+.ant-modal .border-bottom-success,
+.ant-drawer .border-bottom-success,
+.ant-tooltip .border-bottom-success {
+  border-bottom: 1px solid #20E0AB !important;
+}
+.layout .border-left-success,
+.ant-popover .border-left-success,
+.ant-modal .border-left-success,
+.ant-drawer .border-left-success,
+.ant-tooltip .border-left-success {
+  border-left: 1px solid #20E0AB !important;
+}
+.layout .border-right-success,
+.ant-popover .border-right-success,
+.ant-modal .border-right-success,
+.ant-drawer .border-right-success,
+.ant-tooltip .border-right-success {
+  border-right: 1px solid #20E0AB !important;
+}
+.layout .border-warning,
+.ant-popover .border-warning,
+.ant-modal .border-warning,
+.ant-drawer .border-warning,
+.ant-tooltip .border-warning {
+  border: 1px solid #FFC53D !important;
+}
+.layout .border-top-warning,
+.ant-popover .border-top-warning,
+.ant-modal .border-top-warning,
+.ant-drawer .border-top-warning,
+.ant-tooltip .border-top-warning {
+  border-top: 1px solid #FFC53D !important;
+}
+.layout .border-bottom-warning,
+.ant-popover .border-bottom-warning,
+.ant-modal .border-bottom-warning,
+.ant-drawer .border-bottom-warning,
+.ant-tooltip .border-bottom-warning {
+  border-bottom: 1px solid #FFC53D !important;
+}
+.layout .border-left-warning,
+.ant-popover .border-left-warning,
+.ant-modal .border-left-warning,
+.ant-drawer .border-left-warning,
+.ant-tooltip .border-left-warning {
+  border-left: 1px solid #FFC53D !important;
+}
+.layout .border-right-warning,
+.ant-popover .border-right-warning,
+.ant-modal .border-right-warning,
+.ant-drawer .border-right-warning,
+.ant-tooltip .border-right-warning {
+  border-right: 1px solid #FFC53D !important;
+}
+.layout .h-100,
+.ant-popover .h-100,
+.ant-modal .h-100,
+.ant-drawer .h-100,
+.ant-tooltip .h-100 {
+  height: 100%;
+}
+.layout .h-75,
+.ant-popover .h-75,
+.ant-modal .h-75,
+.ant-drawer .h-75,
+.ant-tooltip .h-75 {
+  height: 75%;
+}
+.layout .h-vh-90,
+.ant-popover .h-vh-90,
+.ant-modal .h-vh-90,
+.ant-drawer .h-vh-90,
+.ant-tooltip .h-vh-90 {
+  height: 90vh;
+}
+.layout .h-75-p,
+.ant-popover .h-75-p,
+.ant-modal .h-75-p,
+.ant-drawer .h-75-p,
+.ant-tooltip .h-75-p {
+  height: 75px;
+}
+.layout .h-100-p,
+.ant-popover .h-100-p,
+.ant-modal .h-100-p,
+.ant-drawer .h-100-p,
+.ant-tooltip .h-100-p {
+  height: 100px;
+}
+.layout .h-200-p,
+.ant-popover .h-200-p,
+.ant-modal .h-200-p,
+.ant-drawer .h-200-p,
+.ant-tooltip .h-200-p {
+  height: 200px;
+}
+.layout .h-250-p,
+.ant-popover .h-250-p,
+.ant-modal .h-250-p,
+.ant-drawer .h-250-p,
+.ant-tooltip .h-250-p {
+  height: 250px;
+}
+.layout .h-300-p,
+.ant-popover .h-300-p,
+.ant-modal .h-300-p,
+.ant-drawer .h-300-p,
+.ant-tooltip .h-300-p {
+  height: 300px;
+}
+.layout .w-100,
+.ant-popover .w-100,
+.ant-modal .w-100,
+.ant-drawer .w-100,
+.ant-tooltip .w-100 {
+  width: 100%;
+}
+.layout .w-auto,
+.ant-popover .w-auto,
+.ant-modal .w-auto,
+.ant-drawer .w-auto,
+.ant-tooltip .w-auto {
+  width: auto;
+}
+.layout .w-100-p,
+.ant-popover .w-100-p,
+.ant-modal .w-100-p,
+.ant-drawer .w-100-p,
+.ant-tooltip .w-100-p {
+  width: 100px;
+}
+.layout .w-200-p,
+.ant-popover .w-200-p,
+.ant-modal .w-200-p,
+.ant-drawer .w-200-p,
+.ant-tooltip .w-200-p {
+  width: 200px;
+}
+.layout .w-250-p,
+.ant-popover .w-250-p,
+.ant-modal .w-250-p,
+.ant-drawer .w-250-p,
+.ant-tooltip .w-250-p {
+  width: 250px;
+}
+.layout .w-300-p,
+.ant-popover .w-300-p,
+.ant-modal .w-300-p,
+.ant-drawer .w-300-p,
+.ant-tooltip .w-300-p {
+  width: 300px;
+}
+.layout .f-left,
+.ant-popover .f-left,
+.ant-modal .f-left,
+.ant-drawer .f-left,
+.ant-tooltip .f-left {
+  float: left;
+}
+.layout .f-right,
+.ant-popover .f-right,
+.ant-modal .f-right,
+.ant-drawer .f-right,
+.ant-tooltip .f-right {
+  float: right;
+}
+.layout .f-none,
+.ant-popover .f-none,
+.ant-modal .f-none,
+.ant-drawer .f-none,
+.ant-tooltip .f-none {
+  float: none;
+}
+.layout .f-w-600,
+.ant-popover .f-w-600,
+.ant-modal .f-w-600,
+.ant-drawer .f-w-600,
+.ant-tooltip .f-w-600 {
+  font-weight: 600;
+}
+.layout .flex,
+.ant-popover .flex,
+.ant-modal .flex,
+.ant-drawer .flex,
+.ant-tooltip .flex {
+  display: flex;
+}
+.layout .align-item-start,
+.ant-popover .align-item-start,
+.ant-modal .align-item-start,
+.ant-drawer .align-item-start,
+.ant-tooltip .align-item-start {
+  align-items: flex-start;
+}
+.layout .align-item-end,
+.ant-popover .align-item-end,
+.ant-modal .align-item-end,
+.ant-drawer .align-item-end,
+.ant-tooltip .align-item-end {
+  align-items: flex-end;
+}
+.layout .align-item-center,
+.ant-popover .align-item-center,
+.ant-modal .align-item-center,
+.ant-drawer .align-item-center,
+.ant-tooltip .align-item-center {
+  align-items: center;
+}
+.layout .justify-flex-start,
+.ant-popover .justify-flex-start,
+.ant-modal .justify-flex-start,
+.ant-drawer .justify-flex-start,
+.ant-tooltip .justify-flex-start {
+  justify-content: flex-start;
+}
+.layout .justify-flex-end,
+.ant-popover .justify-flex-end,
+.ant-modal .justify-flex-end,
+.ant-drawer .justify-flex-end,
+.ant-tooltip .justify-flex-end {
+  justify-content: flex-end;
+}
+.layout .justify-center,
+.ant-popover .justify-center,
+.ant-modal .justify-center,
+.ant-drawer .justify-center,
+.ant-tooltip .justify-center {
+  justify-content: center;
+}
+.layout .justify-space-between,
+.ant-popover .justify-space-between,
+.ant-modal .justify-space-between,
+.ant-drawer .justify-space-between,
+.ant-tooltip .justify-space-between {
+  justify-content: space-between;
+}
+.layout .justify-space-around,
+.ant-popover .justify-space-around,
+.ant-modal .justify-space-around,
+.ant-drawer .justify-space-around,
+.ant-tooltip .justify-space-around {
+  justify-content: space-around;
+}
+.layout .flex-flow,
+.ant-popover .flex-flow,
+.ant-modal .flex-flow,
+.ant-drawer .flex-flow,
+.ant-tooltip .flex-flow {
+  flex-flow: row wrap;
+}
+.layout .text-white,
+.ant-popover .text-white,
+.ant-modal .text-white,
+.ant-drawer .text-white,
+.ant-tooltip .text-white {
+  color: #fff;
+}
+.layout .text-black,
+.ant-popover .text-black,
+.ant-modal .text-black,
+.ant-drawer .text-black,
+.ant-tooltip .text-black {
+  color: #000;
+}
+.layout .text-normal,
+.ant-popover .text-normal,
+.ant-modal .text-normal,
+.ant-drawer .text-normal,
+.ant-tooltip .text-normal {
+  color: #929292;
+}
+.layout .text-danger,
+.ant-popover .text-danger,
+.ant-modal .text-danger,
+.ant-drawer .text-danger,
+.ant-tooltip .text-danger {
+  color: #EB5757 !important;
+}
+.layout .text-primary,
+.ant-popover .text-primary,
+.ant-modal .text-primary,
+.ant-drawer .text-primary,
+.ant-tooltip .text-primary {
+  color: #007EFF !important;
+}
+.layout .text-success,
+.ant-popover .text-success,
+.ant-modal .text-success,
+.ant-drawer .text-success,
+.ant-tooltip .text-success {
+  color: #20E0AB !important;
+}
+.layout .text-warning,
+.ant-popover .text-warning,
+.ant-modal .text-warning,
+.ant-drawer .text-warning,
+.ant-tooltip .text-warning {
+  color: #FFC53D !important;
+}
+.layout .text-secondary,
+.ant-popover .text-secondary,
+.ant-modal .text-secondary,
+.ant-drawer .text-secondary,
+.ant-tooltip .text-secondary {
+  color: #00CFFF !important;
+}
+.layout .text-orange,
+.ant-popover .text-orange,
+.ant-modal .text-orange,
+.ant-drawer .text-orange,
+.ant-tooltip .text-orange {
+  color: #F77A4C !important;
+}
+.layout .text-purple,
+.ant-popover .text-purple,
+.ant-modal .text-purple,
+.ant-drawer .text-purple,
+.ant-tooltip .text-purple {
+  color: #A752E4 !important;
+}
+.layout .bg-black,
+.ant-popover .bg-black,
+.ant-modal .bg-black,
+.ant-drawer .bg-black,
+.ant-tooltip .bg-black {
+  background: #000;
+}
+.layout .bg-base-light,
+.ant-popover .bg-base-light,
+.ant-modal .bg-base-light,
+.ant-drawer .bg-base-light,
+.ant-tooltip .bg-base-light {
+  background-color: #F5F7FB;
+}
+.layout .bg-base,
+.ant-popover .bg-base,
+.ant-modal .bg-base,
+.ant-drawer .bg-base,
+.ant-tooltip .bg-base {
+  background: #F8F9FF !important;
+}
+.layout .bg-danger,
+.ant-popover .bg-danger,
+.ant-modal .bg-danger,
+.ant-drawer .bg-danger,
+.ant-tooltip .bg-danger {
+  background: #EB5757;
+}
+.layout .bg-primary,
+.ant-popover .bg-primary,
+.ant-modal .bg-primary,
+.ant-drawer .bg-primary,
+.ant-tooltip .bg-primary {
+  background: #007EFF;
+}
+.layout .bg-secondary,
+.ant-popover .bg-secondary,
+.ant-modal .bg-secondary,
+.ant-drawer .bg-secondary,
+.ant-tooltip .bg-secondary {
+  background: #00CFFF;
+}
+.layout .bg-success,
+.ant-popover .bg-success,
+.ant-modal .bg-success,
+.ant-drawer .bg-success,
+.ant-tooltip .bg-success {
+  background: #20E0AB;
+}
+.layout .bg-warning,
+.ant-popover .bg-warning,
+.ant-modal .bg-warning,
+.ant-drawer .bg-warning,
+.ant-tooltip .bg-warning {
+  background: #FFC53D;
+}
+.layout .ant-tag.secondary,
+.ant-popover .ant-tag.secondary,
+.ant-modal .ant-tag.secondary,
+.ant-drawer .ant-tag.secondary,
+.ant-tooltip .ant-tag.secondary {
+  border-color: #00CFFF;
+  background-color: rgba(0, 207, 255, 0.15);
+  color: #00CFFF;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.secondary:hover,
+.ant-popover .ant-tag.secondary:hover,
+.ant-modal .ant-tag.secondary:hover,
+.ant-drawer .ant-tag.secondary:hover,
+.ant-tooltip .ant-tag.secondary:hover {
+  opacity: 0.7;
+}
+.layout .ant-tag.primary,
+.ant-popover .ant-tag.primary,
+.ant-modal .ant-tag.primary,
+.ant-drawer .ant-tag.primary,
+.ant-tooltip .ant-tag.primary {
+  border-color: #007EFF;
+  background-color: rgba(0, 126, 255, 0.15);
+  color: #007EFF;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.primary:hover,
+.ant-popover .ant-tag.primary:hover,
+.ant-modal .ant-tag.primary:hover,
+.ant-drawer .ant-tag.primary:hover,
+.ant-tooltip .ant-tag.primary:hover {
+  opacity: 0.7;
+}
+.layout .ant-tag.success,
+.ant-popover .ant-tag.success,
+.ant-modal .ant-tag.success,
+.ant-drawer .ant-tag.success,
+.ant-tooltip .ant-tag.success {
+  border-color: #20E0AB;
+  background-color: rgba(32, 224, 171, 0.15);
+  color: #20E0AB;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.success:hover,
+.ant-popover .ant-tag.success:hover,
+.ant-modal .ant-tag.success:hover,
+.ant-drawer .ant-tag.success:hover,
+.ant-tooltip .ant-tag.success:hover {
+  opacity: 0.7;
+}
+.layout .ant-tag.warning,
+.ant-popover .ant-tag.warning,
+.ant-modal .ant-tag.warning,
+.ant-drawer .ant-tag.warning,
+.ant-tooltip .ant-tag.warning {
+  border-color: #FFC53D;
+  background-color: rgba(255, 197, 61, 0.15);
+  color: #FFC53D;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.warning:hover,
+.ant-popover .ant-tag.warning:hover,
+.ant-modal .ant-tag.warning:hover,
+.ant-drawer .ant-tag.warning:hover,
+.ant-tooltip .ant-tag.warning:hover {
+  opacity: 0.7;
+}
+.layout .ant-tag.danger,
+.ant-popover .ant-tag.danger,
+.ant-modal .ant-tag.danger,
+.ant-drawer .ant-tag.danger,
+.ant-tooltip .ant-tag.danger {
+  border-color: #EB5757;
+  background-color: rgba(235, 87, 87, 0.15);
+  color: #EB5757;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.danger:hover,
+.ant-popover .ant-tag.danger:hover,
+.ant-modal .ant-tag.danger:hover,
+.ant-drawer .ant-tag.danger:hover,
+.ant-tooltip .ant-tag.danger:hover {
+  opacity: 0.7;
+}
+.layout .ant-tag.new-filled-primary,
+.ant-popover .ant-tag.new-filled-primary,
+.ant-modal .ant-tag.new-filled-primary,
+.ant-drawer .ant-tag.new-filled-primary,
+.ant-tooltip .ant-tag.new-filled-primary {
+  border-color: #007EFF;
+  background-color: #007EFF;
+  color: #fff;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.new-filled-primary:hover,
+.ant-popover .ant-tag.new-filled-primary:hover,
+.ant-modal .ant-tag.new-filled-primary:hover,
+.ant-drawer .ant-tag.new-filled-primary:hover,
+.ant-tooltip .ant-tag.new-filled-primary:hover {
+  opacity: 0.7;
+}
+.layout .ant-tag.new-filled-success,
+.ant-popover .ant-tag.new-filled-success,
+.ant-modal .ant-tag.new-filled-success,
+.ant-drawer .ant-tag.new-filled-success,
+.ant-tooltip .ant-tag.new-filled-success {
+  border-color: #20E0AB;
+  background-color: #20E0AB;
+  color: #fff;
+  transition: all ease-in-out 0.4s;
+}
+.layout .ant-tag.new-filled-success:hover,
+.ant-popover .ant-tag.new-filled-success:hover,
+.ant-modal .ant-tag.new-filled-success:hover,
+.ant-drawer .ant-tag.new-filled-success:hover,
+.ant-tooltip .ant-tag.new-filled-success:hover {
+  opacity: 0.7;
+}
+.layout .b-0,
+.ant-popover .b-0,
+.ant-modal .b-0,
+.ant-drawer .b-0,
+.ant-tooltip .b-0 {
+  border: 0 !important;
+}
+.layout .border-1,
+.ant-popover .border-1,
+.ant-modal .border-1,
+.ant-drawer .border-1,
+.ant-tooltip .border-1 {
+  border: 1px solid #E3E8F1;
+}
+.layout .cursor-pointer,
+.ant-popover .cursor-pointer,
+.ant-modal .cursor-pointer,
+.ant-drawer .cursor-pointer,
+.ant-tooltip .cursor-pointer {
+  cursor: pointer;
+}
+.layout .cursor-default,
+.ant-popover .cursor-default,
+.ant-modal .cursor-default,
+.ant-drawer .cursor-default,
+.ant-tooltip .cursor-default {
+  cursor: default;
+}
+.layout .overflow-h,
+.ant-popover .overflow-h,
+.ant-modal .overflow-h,
+.ant-drawer .overflow-h,
+.ant-tooltip .overflow-h {
+  overflow: hidden;
+}
+.layout .scroller,
+.ant-popover .scroller,
+.ant-modal .scroller,
+.ant-drawer .scroller,
+.ant-tooltip .scroller {
+  overflow: scroll !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.layout .scroller::-moz-scrollbar,
+.ant-popover .scroller::-moz-scrollbar,
+.ant-modal .scroller::-moz-scrollbar,
+.ant-drawer .scroller::-moz-scrollbar,
+.ant-tooltip .scroller::-moz-scrollbar {
+  display: none;
+}
+.layout .scroller::-webkit-scrollbar,
+.ant-popover .scroller::-webkit-scrollbar,
+.ant-modal .scroller::-webkit-scrollbar,
+.ant-drawer .scroller::-webkit-scrollbar,
+.ant-tooltip .scroller::-webkit-scrollbar {
+  width: 6px;
+}
+.layout .scroller::-webkit-scrollbar:horizontal,
+.ant-popover .scroller::-webkit-scrollbar:horizontal,
+.ant-modal .scroller::-webkit-scrollbar:horizontal,
+.ant-drawer .scroller::-webkit-scrollbar:horizontal,
+.ant-tooltip .scroller::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.layout .scroller::-webkit-scrollbar-track,
+.ant-popover .scroller::-webkit-scrollbar-track,
+.ant-modal .scroller::-webkit-scrollbar-track,
+.ant-drawer .scroller::-webkit-scrollbar-track,
+.ant-tooltip .scroller::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: #f6f8fd;
+}
+.layout .scroller::-webkit-scrollbar-thumb,
+.ant-popover .scroller::-webkit-scrollbar-thumb,
+.ant-modal .scroller::-webkit-scrollbar-thumb,
+.ant-drawer .scroller::-webkit-scrollbar-thumb,
+.ant-tooltip .scroller::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 3px;
+}
+.layout .scroller::-webkit-scrollbar-thumb:hover,
+.ant-popover .scroller::-webkit-scrollbar-thumb:hover,
+.ant-modal .scroller::-webkit-scrollbar-thumb:hover,
+.ant-drawer .scroller::-webkit-scrollbar-thumb:hover,
+.ant-tooltip .scroller::-webkit-scrollbar-thumb:hover {
+  background: #d6d6d6;
+}
+.layout .pre-wrap,
+.ant-popover .pre-wrap,
+.ant-modal .pre-wrap,
+.ant-drawer .pre-wrap,
+.ant-tooltip .pre-wrap {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.layout .d-none,
+.ant-popover .d-none,
+.ant-modal .d-none,
+.ant-drawer .d-none,
+.ant-tooltip .d-none {
+  display: none;
+}
+@media (max-width: 480px) {
+  .layout .d-none-xs,
+  .ant-popover .d-none-xs,
+  .ant-modal .d-none-xs,
+  .ant-drawer .d-none-xs,
+  .ant-tooltip .d-none-xs {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .layout .d-none-sm,
+  .ant-popover .d-none-sm,
+  .ant-modal .d-none-sm,
+  .ant-drawer .d-none-sm,
+  .ant-tooltip .d-none-sm {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .layout .d-none-md,
+  .ant-popover .d-none-md,
+  .ant-modal .d-none-md,
+  .ant-drawer .d-none-md,
+  .ant-tooltip .d-none-md {
+    display: none;
+  }
+}
+.layout .d-block,
+.ant-popover .d-block,
+.ant-modal .d-block,
+.ant-drawer .d-block,
+.ant-tooltip .d-block {
+  display: block;
+}
+.layout .d-inline-block,
+.ant-popover .d-inline-block,
+.ant-modal .d-inline-block,
+.ant-drawer .d-inline-block,
+.ant-tooltip .d-inline-block {
+  display: inline-block;
+}
+.layout .transition,
+.ant-popover .transition,
+.ant-modal .transition,
+.ant-drawer .transition,
+.ant-tooltip .transition {
+  transition: all ease-in-out 0.4s;
+}
+.layout .overlay,
+.ant-popover .overlay,
+.ant-modal .overlay,
+.ant-drawer .overlay,
+.ant-tooltip .overlay {
+  position: relative;
+}
+.layout .overlay:before,
+.ant-popover .overlay:before,
+.ant-modal .overlay:before,
+.ant-drawer .overlay:before,
+.ant-tooltip .overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.layout .p-relative,
+.ant-popover .p-relative,
+.ant-modal .p-relative,
+.ant-drawer .p-relative,
+.ant-tooltip .p-relative {
+  position: relative;
+}
+.layout .p-absolute,
+.ant-popover .p-absolute,
+.ant-modal .p-absolute,
+.ant-drawer .p-absolute,
+.ant-tooltip .p-absolute {
+  position: absolute;
+}
+.layout .text-left,
+.ant-popover .text-left,
+.ant-modal .text-left,
+.ant-drawer .text-left,
+.ant-tooltip .text-left {
+  text-align: left;
+}
+.layout .text-center,
+.ant-popover .text-center,
+.ant-modal .text-center,
+.ant-drawer .text-center,
+.ant-tooltip .text-center {
+  text-align: center;
+}
+.layout .text-right,
+.ant-popover .text-right,
+.ant-modal .text-right,
+.ant-drawer .text-right,
+.ant-tooltip .text-right {
+  text-align: right;
+}
+/** Tooltip **/
+.ant-tooltip {
+  z-index: 99999 !important;
+}
+@media (max-width: 560px) {
+  .ant-tooltip {
+    display: none !important;
+  }
+}
+.ant-tooltip.tooltip-mobile-view {
+  display: block !important;
+}
+@media (max-width: 560px) {
+  .ant-tooltip.tooltip-mobile-view {
+    display: block !important;
+  }
+}
+.ant-tooltip .icon + span {
+  padding: 0 12px;
+}
+.ant-tooltip-inner {
+  border-radius: 0px !important;
+  color: #fff;
+}
+.ant-tooltip-inner .leads-sidebar-tags-h {
+  margin-bottom: -10px;
+}
+.ant-tooltip-inner .leads-sidebar-tags-h .ant-tag {
+  margin-bottom: 10px;
+}
+.ant-tooltip-inner .head-tag-h {
+  margin-bottom: -10px;
+}
+.ant-tooltip-inner h4 {
+  color: #fff;
+}
+@media (max-width: 567px) {
+  .ant-modal-body {
+    padding: 50px 30px !important;
+  }
+}
+/**
+  System Wide Announcements
+*/
+.ant-btn {
+  background: #F8F9FF;
+}
+.ant-btn .anticon {
+  font-size: 14px !important;
+}
+.ant-btn .icon {
+  font-size: 14px !important;
+  color: #000;
+}
+.ant-btn .icon + span {
+  margin-left: 8px;
+}
+.ant-btn .ant-btn-loading-icon .anticon {
+  line-height: 20px;
+}
+.ant-btn.ant-btn-primary {
+  text-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  background: #007EFF;
+  border-color: #0065cc;
+}
+.ant-btn.ant-btn-primary:hover,
+.ant-btn.ant-btn-primary:focus {
+  border-color: #0065cc;
+  background: #007EFF;
+  color: #fff;
+}
+.ant-btn.ant-btn-primary .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-primary .icon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-danger {
+  text-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  background: #EB5757;
+  border-color: #e62929;
+}
+.ant-btn.ant-btn-danger:hover,
+.ant-btn.ant-btn-danger:focus {
+  border-color: #e62929;
+  background: #EB5757;
+  color: #fff;
+}
+.ant-btn.ant-btn-danger .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-danger .icon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-success {
+  text-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  background: #20E0AB;
+  border-color: #19b489;
+}
+.ant-btn.ant-btn-success:hover,
+.ant-btn.ant-btn-success:focus {
+  border-color: #19b489;
+  background: #20E0AB;
+  color: #fff;
+}
+.ant-btn.ant-btn-success .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-success .icon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-warning {
+  text-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  background: #FFC53D;
+  border-color: #ffb60a;
+}
+.ant-btn.ant-btn-warning:hover,
+.ant-btn.ant-btn-warning:focus {
+  border-color: #ffb60a;
+  background: #FFC53D;
+  color: #fff;
+}
+.ant-btn.ant-btn-warning .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-warning .icon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-secondary {
+  text-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  background: #00CFFF;
+  border-color: #00a6cc;
+}
+.ant-btn.ant-btn-secondary:hover,
+.ant-btn.ant-btn-secondary:focus {
+  border-color: #00a6cc;
+  background: #00CFFF;
+  color: #fff;
+}
+.ant-btn.ant-btn-secondary .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-secondary .icon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-link {
+  text-shadow: none;
+  box-shadow: none;
+  color: #007EFF;
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0);
+}
+.ant-btn.ant-btn-link:hover,
+.ant-btn.ant-btn-link:focus {
+  border-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  color: #007EFF;
+}
+.ant-btn.ant-btn-link .anticon {
+  color: #007EFF !important;
+}
+.ant-btn.ant-btn-link .icon {
+  color: #007EFF !important;
+}
+.ant-btn.ant-btn-icon-only {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+.ant-btn.ant-btn-round {
+  border-radius: 30px;
+  padding: 0 10px;
+}
+.ant-btn.ant-btn-round.ant-btn-icon-only {
+  width: auto;
+}
+.ant-btn.ant-btn-circle {
+  min-width: 32px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0;
+}
+.ant-btn.ant-btn-circle .icon {
+  margin-right: 0;
+}
+.ant-btn.ant-btn-circle.ant-btn-lg {
+  min-width: 48px;
+}
+.ant-btn.ant-btn-circle.ant-btn-sm {
+  min-width: 24px;
+}
+.ant-btn.ant-btn-background-ghost {
+  background: transparent;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-primary {
+  border-color: #007EFF;
+  color: #007EFF;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-primary .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-primary .anticon {
+  color: #007EFF !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-primary:hover {
+  background: #007EFF !important;
+  color: #fff;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-primary:hover .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-primary:hover .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-danger {
+  border-color: #EB5757;
+  color: #EB5757;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-danger .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-danger .anticon {
+  color: #EB5757 !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-danger:hover {
+  background: #EB5757 !important;
+  color: #fff;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-danger:hover .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-danger:hover .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-success {
+  border-color: #20E0AB;
+  color: #20E0AB;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-success .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-success .anticon {
+  color: #20E0AB !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-success:hover {
+  background: #20E0AB !important;
+  color: #fff;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-success:hover .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-success:hover .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-warning {
+  border-color: #FFC53D;
+  color: #FFC53D;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-warning .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-warning .anticon {
+  color: #FFC53D !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-warning:hover {
+  background: #FFC53D !important;
+  color: #fff;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-warning:hover .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-warning:hover .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-secondary {
+  border-color: #00CFFF;
+  color: #00CFFF;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-secondary .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-secondary .anticon {
+  color: #00CFFF !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-secondary:hover {
+  background: #00CFFF !important;
+  color: #fff;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-secondary:hover .icon,
+.ant-btn.ant-btn-background-ghost.ant-btn-secondary:hover .anticon {
+  color: #fff !important;
+}
+.ant-btn.ant-btn-background-ghost.ant-btn-link {
+  border: 0;
+}
+.ant-btn.ant-btn-background-ghost[disabled] .anticon {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+.ant-btn[disabled] .anticon {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+.layout {
+  background: #fff !important;
+  overflow-x: hidden !important;
+}
+.layout .main-content {
+  margin-top: 120px;
+}
+/** Notifications Popover **/
+.notify-content {
+  margin: -12px -16px;
+  min-width: 318px;
+  max-width: 318px;
+  width: 318px;
+}
+@media (max-width: 400px) {
+  .notify-content {
+    min-width: 260px;
+    max-width: 260px;
+    width: 260px;
+  }
+}
+.notify-content .notify-content-item {
+  padding-bottom: 16px;
+  margin: 16px 12px;
+  border-bottom: 1px solid #E3E8F1;
+}
+.notify-content .notify-content-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.notify-content .notify-content-head .caption {
+  flex: 1 1 100%;
+}
+.notify-content .notify-content-head .caption p {
+  margin: 0;
+}
+.notify-content .notify-content-head .close-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #007EFF;
+  transition: all ease-in-out 0.4s;
+}
+.notify-content .notify-content-head .close-icon:hover {
+  color: #EB5757;
+}
+.notify-content .notify-content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notify-content .notify-content-footer span {
+  font-size: 12px;
+  font-weight: 500;
+}
+.notify-content .notify-content-footer .any-text {
+  cursor: pointer;
+  color: #007EFF;
+}
+/** Notifications Popover End **/
+/** Header **/
+.ant-layout-header.main-header {
+  transition: all ease-in-out 0.15s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 9;
+  width: 100%;
+  height: 75px;
+  line-height: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #E3E8F1;
+}
+@media (max-width: 991px) {
+  .ant-layout-header.main-header {
+    height: 100%;
+  }
+}
+.ant-layout-header.main-header.fixed {
+  background-color: #fff;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+.nav-holder {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 567px) {
+  .nav-holder {
+    flex-flow: wrap row;
+    gap: 20px;
+    padding: 10px 0;
+  }
+}
+.main-mwnu-group {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  gap: 30px;
+}
+.logo a {
+  display: inline-block;
+}
+.logo a img {
+  min-width: 110px;
+}
+@media (max-width: 767px) {
+  .logo {
+    max-width: 150px;
+  }
+}
+@media (max-width: 567px) {
+  .logo {
+    max-width: 100%;
+    min-width: 100%;
+    text-align: center;
+  }
+}
+.main-menu {
+  display: flex;
+}
+.main-menu li {
+  margin: 0 15px;
+  min-height: 74px;
+  line-height: 74px;
+  font-weight: 500;
+  color: #000;
+}
+@media (max-width: 567px) {
+  .main-menu li {
+    min-height: 40px;
+    line-height: 40px;
+  }
+}
+.main-menu li:first-child {
+  margin-left: 0;
+}
+.main-menu li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 1400px) {
+  .main-menu li {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 991px) {
+  .main-menu li {
+    display: none;
+  }
+}
+.main-menu li.mobile-active {
+  display: flex;
+  align-items: center;
+  line-height: 15px;
+  margin: 0;
+}
+@media (min-width: 991px) {
+  .main-menu li.mobile-active {
+    display: none;
+  }
+}
+.main-menu li .uppercase {
+  text-transform: uppercase;
+}
+.main-menu li:hover a {
+  color: #007EFF;
+}
+.main-menu li:hover.menu-dropdown-holder:after {
+  border-color: #007EFF;
+}
+.main-menu li:hover.menu-dropdown-holder .menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+  bottom: -290px;
+}
+.main-menu li a {
+  color: #000;
+}
+.main-menu li a.drawer-icon {
+  display: inline-block;
+}
+@media (min-width: 1200px) {
+  .main-menu li a.drawer-icon {
+    display: none;
+  }
+}
+.main-menu li .ant-btn {
+  min-width: 120px;
+  font-weight: 600;
+}
+.main-menu li .ant-btn.ant-btn-success {
+  border-color: #1D684F;
+  color: #1D684F;
+}
+.main-menu li .ant-btn.ant-btn-success:hover {
+  background: #1D684F !important;
+}
+.main-menu li .anticon,
+.main-menu li .icon {
+  font-size: 22px;
+  color: #929292;
+  cursor: pointer;
+}
+.main-menu.second-menu {
+  flex: 1 1 100%;
+  justify-content: flex-end;
+}
+.main-menu.second-menu li {
+  display: flex;
+  align-items: center;
+}
+.main-menu.second-menu li > span {
+  line-height: 100%;
+}
+.main-menu.second-menu li .ant-btn {
+  min-width: 100%;
+}
+.main-menu.second-menu li .ant-btn .anticon {
+  display: block;
+}
+@media (min-width: 400px) {
+  .main-menu.second-menu li .ant-btn .anticon {
+    display: none;
+  }
+}
+.main-menu.second-menu li .ant-btn .anticon + span {
+  display: none;
+}
+@media (min-width: 400px) {
+  .main-menu.second-menu li .ant-btn .anticon + span {
+    display: block;
+  }
+}
+/** Header End **/
+/** Footer **/
+.ant-layout-footer.footer {
+  padding: 30px 0;
+  border-top: 1px solid #E3E8F1;
+  font-size: 15px;
+  color: #000;
+  font-weight: 500;
+}
+/** Footer End **/
+/** Main Heading **/
+.main-heading {
+  text-align: center;
+}
+.main-heading .subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+  display: block;
+  color: #FF9254;
+}
+@media (max-width: 1100px) {
+  .main-heading .subtitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .main-heading .subtitle {
+    font-size: 18px;
+  }
+}
+.main-heading .title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #000;
+}
+@media (max-width: 1100px) {
+  .main-heading .title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .main-heading .title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .main-heading .title {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+.main-heading p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ADADAD;
+  margin: 0;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .main-heading p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+/** Main Heading End **/
+/** Sub Header **/
+.sub-header .sub-header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.sub-header .title {
+  margin-bottom: 0;
+}
+.sub-header .ant-select {
+  width: 100px;
+}
+/** Sub Header End **/
+/** Not Found **/
+.not-found {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.not-found .error-page {
+  text-align: center;
+  padding: 27px;
+}
+.not-found .error-page .page-title {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.not-found .error-page .page-title strong {
+  font-size: 39px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767) {
+  .not-found .error-page .page-title {
+    font-size: 20px;
+  }
+  .not-found .error-page .page-title strong {
+    font-size: 29px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .not-found .error-page .page-title {
+    font-size: 18px;
+  }
+  .not-found .error-page .page-title strong {
+    font-size: 24px;
+  }
+}
+.not-found .error-page p {
+  font-size: 16px;
+  color: rgba(146, 146, 146, 0.5);
+  margin-bottom: 16px;
+}
+.not-found .error-page p:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767) {
+  .not-found .error-page p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .not-found .error-page p {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+}
+.not-found .error-page .icon {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .not-found .error-page .icon {
+    margin-bottom: 30px;
+  }
+}
+.not-found .error-page .error-img {
+  margin-bottom: 34px;
+}
+@media screen and (max-width: 767) {
+  .not-found .error-page .error-img > img {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .not-found .error-page .error-img {
+    margin-bottom: 24px;
+  }
+  .not-found .error-page .error-img > img {
+    max-width: 280px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .not-found .error-page .error-img > img {
+    max-width: 250px;
+  }
+}
+/** Not Found **/
+/** Notifications Page **/
+.notifications-page .notify-head {
+  padding: 15px 0;
+  border: 1px solid #E3E8F1;
+}
+.notifications-page .notify-item {
+  padding: 20px 0;
+}
+.notifications-page .notify-item:nth-child(even) {
+  background: #F8F9FF;
+}
+.notifications-page .notify-item .notify-item-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.notifications-page .notify-item .notify-item-left .ant-avatar {
+  min-width: 32px;
+}
+.notifications-page .notify-item .notify-item-left p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+.notifications-page .notify-item .notify-item-right span {
+  color: #000;
+}
+/** Notifications Page End **/
+/***************** Pages Styling *****************/
+.qty-input {
+  display: flex;
+}
+.qty-input .ant-input {
+  border-radius: 0;
+  max-width: calc(100% - 100px);
+}
+.qty-input .ant-btn {
+  min-width: 50px;
+  width: 50px;
+  height: 40px;
+}
+.qty-input .ant-btn:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.qty-input .ant-btn:last-child {
+  border-radius: 0 6px 6px 0;
+}
+/*# sourceMappingURL=index.css.map */
